@@ -1,4 +1,4 @@
-import Hedaer from '../components/Header'
+import Hero from '../components/Hero'
 import '../styles/globals.css'
 
 export default function RootLayout({
@@ -10,7 +10,7 @@ export default function RootLayout({
     <html>
       <head />
       <body>
-        <Hedaer />
+        <Hero />
         <main>
           {children}
         </main>
