@@ -1,3 +1,4 @@
+import Hedaer from '../components/Header'
 import '../styles/globals.css'
 
 export default function RootLayout({
@@ -8,7 +9,12 @@ export default function RootLayout({
   return (
     <html>
       <head />
-      <body>{children}</body>
+      <body>
+        <Hedaer />
+        <main>
+          {children}
+        </main>
+      </body>
     </html>
   )
 }
