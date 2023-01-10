@@ -4,7 +4,7 @@
 
 @layer base {
     body {
-        @apply bg-dark-primary
+        @apply bg-dark-primary transition-all duration-700
     }
 }
 

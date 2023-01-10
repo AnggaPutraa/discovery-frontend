@@ -1,4 +1,4 @@
-import Hero from '../components/Hero'
+import Header from '../components/Header'
 import '../styles/globals.css'
 
 export default function RootLayout({
@@ -10,7 +10,7 @@ export default function RootLayout({
     <html>
       <head />
       <body>
-        <Hero />
+        <Header />
         <main>
           {children}
         </main>

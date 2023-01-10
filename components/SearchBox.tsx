@@ -1,21 +1,40 @@
 'use client'
 
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid'
+import { useRouter } from 'next/navigation';
+import { FormEvent, useState } from 'react';
 
 const SearchBox = () => {
+    const [input, setInput] = useState('')
+    const router = useRouter();
+
+    const handleSearch = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        if (!input) return;
+        router.push(`/search?term=${input}`)
+    }
+
     return (
-            <form className="flex items-center rounded-full border mt-6">
-                <input
-                    type="text"
-                    className="bg-transparent w-full outline-none text-white px-4 py-2 placeholder-gray-400"
-                    placeholder="Search something ..."
+        <form 
+        onSubmit={handleSearch}
+        className="flex items-center rounded-full border mt-6"
+        >
+            <input
+                type="text"
+                value={input}
+                onChange={(e) => { setInput(e.target.value) }}
+                className="bg-transparent w-full outline-none text-white px-4 py-2 placeholder-gray-400"
+                placeholder="Search something ..."
+            />
+            <button
+                type="submit"
+                disabled={!input}
+            >
+                <MagnifyingGlassIcon
+                    className='h-8 w-8 pr-4 my-2rounded-full text-white disabled:text-gray-600 disabled:cursor-not-allowed'
                 />
-                <button type="submit">
-                    <MagnifyingGlassIcon
-                    className='h-8 w-8 pr-4 my-2rounded-full text-white'
-                    />
-                </button>
-            </form>
+            </button>
+        </form>
     );
 }
 

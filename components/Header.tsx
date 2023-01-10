@@ -1,9 +1,9 @@
 import CategoriesNavigation from "./CategoriesNavigation";
 import SearchBox from "./SearchBox";
 
-const Hero = () => {
+const Header = () => {
     return (
-        <section className="mt-8">
+        <header className="mt-8">
             {/* Discovery Text */}
             <div className="p-4 flex justify-center items-center">
                 <h1 className="text-6xl font-bold text-white">Discovery</h1>
@@ -14,8 +14,8 @@ const Hero = () => {
                 <CategoriesNavigation />
                 <SearchBox />
             </div>
-        </section>
+        </header>
     );
 }
 
-export default Hero;
+export default Header;
