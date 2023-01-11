@@ -1,15 +1,29 @@
-import { format } from 'date-fns'
+'use client'
+
+import { useRouter } from 'next/navigation';
+import { format } from 'date-fns';
 
 type Props = {
     news: News
 }
 
 const NewsCard = ({ news }: Props) => {
+    const router = useRouter();
 
     const parsedDate = format(new Date(String(news.published_at)), 'dd MMMM yyyy');
 
+    const handleClick = () => {
+        const queryParams = Object.entries(news)
+            .map(([key, value]) => `${key}=${value}`).join('&');
+        const url = `/news?${queryParams}`
+        router.push(url)
+    }
+
     return (
-        <div className="p-4 rounded-lg bg-dark-secondary cursor-pointer">
+        <div
+            className="p-4 rounded-lg bg-light-secondary dark:bg-dark-secondary cursor-pointer"
+            onClick={handleClick}
+        >
             <div className="h-56 w-full overflow-hidden rounded-lg">
                 <img
                     src={news.image === null ? 'https://merahputih.com/media/c0/0e/d2/c00ed25b79766b3cafca6962d62714ad.png' : news.image}
