@@ -1,12 +1,15 @@
 import CategoriesNavigation from "./CategoriesNavigation";
 import SearchBox from "./SearchBox";
+import ThemeButton from "./ThemeButton";
 
 const Header = () => {
     return (
         <header className="mt-8">
             {/* Discovery Text */}
-            <div className="p-4 flex justify-center items-center">
-                <h1 className="text-4xl md:text-6xl font-bold text-white">Discovery</h1>
+            <div className="p-4 grid grid-cols-3 max-w-7xl mx-auto">
+                <div className="w-6"/>
+                <h1 className="text-4xl md:text-6xl font-bold text-white text-center">Discovery</h1>
+                <ThemeButton />
             </div>
             {/* Paragraph */}
             <div className="max-w-7xl mx-auto px-8">
