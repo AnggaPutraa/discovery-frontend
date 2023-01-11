@@ -16,21 +16,21 @@ const NewsDetailPage = ({ searchParams }: Props) => {
     const parsedDate = format(new Date(searchParams.published_at?.slice(0, 10) || Date.now()), 'dd MMMM yyyy');
 
     return (
-        <main className="max-w-7xl mx-auto sm:px-8 my-6">
+        <main className="max-w-7xl mx-auto px-8 md:px-0 my-6">
             <h1 className="mb-2 text-center text-2xl font-bold">" <span className='italic'>{searchParams.title}</span> "</h1>
-            <div className="h-[36rem] w-full overflow-hidden rounded-lg">
+            <div className="h-[20rem] md:h-[36rem] w-full overflow-hidden rounded-lg">
                 <img
                     src={searchParams.image === null ? 'https://merahputih.com/media/c0/0e/d2/c00ed25b79766b3cafca6962d62714ad.png' : searchParams.image}
                     alt={searchParams.title}
-                    className='h-[36rem] w-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition duration-150'
+                    className='h-[20rem] md:h-[36rem] w-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition duration-150'
                 />
             </div>
-            <div className='mt-4 flex divide-x-2 space-x-4 justify-center'>
+            <div className='my-2 flex divide-x-2 space-x-4 justify-center'>
                 <h2>Published by {searchParams.author === 'null' ? 'Unknown' : searchParams.author}</h2>
                 <h2 className='pl-4'>Published at {parsedDate}</h2>
                 <h2 className='pl-4'>Source from <span className='uppercase font-bold'>{searchParams.country}</span></h2>
             </div>
-            <p className='indent-8'>{searchParams.description}</p>
+            <p className='indent-8 text-justify'>{searchParams.description}</p>
         </main>
     );
 }
