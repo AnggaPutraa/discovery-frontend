@@ -10,7 +10,7 @@ type Category =
 type Pagination = {
     count: Int;
     limit: Int;
-    offest: Int;
+    offset: Int;
     total: Int;
 }
 

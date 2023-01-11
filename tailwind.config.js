@@ -8,9 +8,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'dark-primary': '#171717'
+        'dark-primary': '#171717',
+        'dark-secondary': '#1F1F1F'
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
 }

@@ -42,8 +42,8 @@ const fetchNews = async (
         }
     }
     `;
-
-    const res = await fetch(
+    
+    const response = await fetch(
         'https://luofeng.stepzen.net/api/juiced-pug/__graphql',
         {
             method: "POST",
@@ -64,7 +64,7 @@ const fetchNews = async (
         }
     );
 
-    const parseRes = await res.json();
+    const parseRes = await response.json();
     const news = sortByImage(parseRes.data.myQuery);
     return news;
 }
