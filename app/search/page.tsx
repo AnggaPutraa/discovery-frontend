@@ -16,7 +16,7 @@ const SearchPage = async ({ searchParams }: Props) => {
 
     return (
         <section className="max-w-7xl mx-auto px-8 mt-4">
-            <h1 className="text-2xl mb-2 text-center md:text-start">Search results for <span className="font-bold">{searchParams?.term}</span></h1>
+            <h1 className="text-2xl mb-4 text-center">Search results for <span className="font-bold">{searchParams?.term}</span></h1>
             <NewsList newsList={newsResponse} />
         </section>
     );
