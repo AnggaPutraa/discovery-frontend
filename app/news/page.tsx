@@ -9,7 +9,7 @@ type Props = {
 
 const NewsDetailPage = ({ searchParams }: Props) => {
 
-    if ((searchParams && Object.entries(searchParams).length === 0 || !searchParams)) {
+    if (((searchParams && Object.entries(searchParams).length === 0) || !searchParams)) {
         return notFound();
     }
 
