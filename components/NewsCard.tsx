@@ -21,7 +21,7 @@ const NewsCard = ({ news }: Props) => {
 
     return (
         <div
-            className="p-4 rounded-lg bg-light-secondary dark:bg-dark-secondary cursor-pointer"
+            className="p-4 rounded-lg bg-light-secondary dark:bg-dark-secondary shadow-md cursor-pointer"
             onClick={handleClick}
         >
             <div className="h-56 w-full overflow-hidden rounded-lg">
@@ -32,8 +32,8 @@ const NewsCard = ({ news }: Props) => {
                 />
             </div>
             <div className="pt-2 flex flex-col justify-between">
-                <h1 className="text-white font-semibold line-clamp-2">{news.title}</h1>
-                <h1 className="text-gray-400 line-clamp-2">{news.description}</h1>
+                <h1 className="text-black dark:text-white font-semibold line-clamp-2">{news.title}</h1>
+                <h1 className="text-gray-500 dark:text-gray-400 line-clamp-2">{news.description}</h1>
                 <h1 className="text-gray-400 text-sm">Published at {parsedDate}</h1>
             </div>
         </div>

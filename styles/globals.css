@@ -10,6 +10,6 @@
 
 @layer components {
     .category-link {
-        @apply px-3 md:px-6 py-2 cursor-pointer border rounded-full capitalize border-gray-400 text-gray-400 hover:border-none hover:bg-blue-500 hover:text-white hover:font-semibold hover:scale-110 transform transition-transform duration-200 ease-out
+        @apply px-3 md:px-6 py-2 cursor-pointer border rounded-full capitalize border-gray-500 dark:border-gray-400 text-gray-500 dark:text-gray-400 hover:border-none hover:bg-blue-500 hover:text-white hover:font-semibold hover:scale-110 transform transition-transform duration-200 ease-out
     }
 }

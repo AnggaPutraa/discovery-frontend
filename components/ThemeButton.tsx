@@ -21,7 +21,7 @@ const ThemeButton = () => {
     const currentTheme = theme === 'system' ? systemTheme : theme;
 
     return (
-        <div className="flex justify-end items-center">
+        <div className="flex justify-end items-center col-span-2 md:col-span-1">
             {
                 currentTheme === 'dark' ? (
                     <SunIcon

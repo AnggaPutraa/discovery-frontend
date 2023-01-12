@@ -25,7 +25,7 @@ const NewsDetailPage = ({ searchParams }: Props) => {
                     className='h-[20rem] md:h-[36rem] w-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition duration-150'
                 />
             </div>
-            <div className='my-2 flex divide-x-2 space-x-4 justify-center'>
+            <div className='my-2 flex divide-x-2 divide-gray-500 dark:divide-gray-400 space-x-4 justify-center'>
                 <h2>Published by {searchParams.author === 'null' ? 'Unknown' : searchParams.author}</h2>
                 <h2 className='pl-4'>Published at {parsedDate}</h2>
                 <h2 className='pl-4'>Source from <span className='uppercase font-bold'>{searchParams.country}</span></h2>
