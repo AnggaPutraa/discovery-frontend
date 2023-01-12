@@ -9,7 +9,7 @@ const CategoryLink = ({ category, isActive }: Props) => {
     return (
         <Link
             href={`/news/${category}`}
-            className={`category-link ${isActive && 'bg-blue-500 text-white border-none font-semibold'}`}
+            className={`category-link ${isActive && 'bg-blue-500 text-white dark:text-white border-none font-semibold'}`}
         >
             {category}
         </Link>
