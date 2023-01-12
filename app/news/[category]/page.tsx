@@ -1,5 +1,6 @@
 import NewsList from "../../../components/NewsList";
 import fetchNews from "../../../lib/request";
+import { categories } from "../../../constants";
 
 type Props = {
     params: {
@@ -17,3 +18,9 @@ const NewsCategoryPage = async ({ params: { category } }: Props) => {
 }
 
 export default NewsCategoryPage;
+
+export async function generateStaticParams() {
+    return categories.map(category => ({
+        category: category
+    }))
+}
