@@ -20,7 +20,7 @@ const NewsDetailPage = ({ searchParams }: Props) => {
             <h1 className="mb-2 text-center text-2xl font-bold">" <span className='italic'>{searchParams.title}</span> "</h1>
             <div className="h-[20rem] md:h-[36rem] w-full overflow-hidden rounded-lg">
                 <img
-                    src={searchParams.image === null ? 'https://merahputih.com/media/c0/0e/d2/c00ed25b79766b3cafca6962d62714ad.png' : searchParams.image}
+                    src={searchParams.image || './no-image.png'}
                     alt={searchParams.title}
                     className='h-[20rem] md:h-[36rem] w-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition duration-150'
                 />

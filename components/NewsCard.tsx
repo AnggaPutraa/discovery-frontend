@@ -26,7 +26,7 @@ const NewsCard = ({ news }: Props) => {
         >
             <div className="h-56 w-full overflow-hidden rounded-lg">
                 <img
-                    src={news.image === null ? 'https://merahputih.com/media/c0/0e/d2/c00ed25b79766b3cafca6962d62714ad.png' : news.image}
+                    src={news.image === null ? '/no-image.png' : news.image}
                     alt={news.title}
                     className='h-56 w-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition duration-150'
                 />
